@@ -16,7 +16,7 @@ export class PersonsService {
       return resData.results.map(character => character.name);
     }))
     .subscribe(transformedData=>{
-      console.log(transformedData)
+      this.personsChanged.next(transformedData)
     });
   }
 
